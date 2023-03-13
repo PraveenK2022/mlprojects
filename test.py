@@ -1,22 +1,13 @@
-from setuptools import find_packages,setup
-from typing import List
-
-HEPEN_E_DOT = '-e .'
-
-def get_req(file_path:str)-> List[str]: 
-    '''
-    this function will return the list of requirements
-    '''
-    req=[]
-    with open(file_path) as file_obj:
-        req=file_obj.readlines()
-        req=[ r.replace('\n','') for r in req]
+class Car:
+    def __init__(self,window,name):
+        self.windows=window
+        self.name=name
     
-    if HEPEN_E_DOT in req:
-        req.remove(HEPEN_E_DOT)
+    def w_num(self):
+        print("this call has {0} windows".format(self.windows))
 
-    return req
 
-result=[]
-result=get_req('requirements.txt')
-print(result)
+try:
+    a=b
+except:
+    CustomException()
